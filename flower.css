@@ -1,8 +1,8 @@
+/*font-family style*/
 * {
   margin: 0;
 }
 
-/*font-family style*/
 .noto-serif {
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
@@ -24,7 +24,7 @@ body {
 
 /*header style*/
 header {
-  margin: 30px 150px 0px 150px;
+  margin: 0 150px;
 }
 
 /*nav style*/
@@ -32,17 +32,28 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 30px;
   margin-bottom: 120px;
 }
+
 nav ul {
   display: flex;
   text-align: center;
 }
-nav li {
-  list-style: none;
-  padding-right: 48px;
+
+.nav-ul {
+  display: flex;
+  align-items: center;
 }
-nav li a {
+
+nav li,
+.logo li {
+  list-style: none;
+  padding-right: 3rem;
+}
+
+nav li a,
+.logo a {
   text-decoration: none;
   color: #252432;
   font-weight: 700;
@@ -59,40 +70,188 @@ li:nth-child(3) a {
   justify-content: space-between;
   align-items: end;
 }
+
 .primary-title {
   color: #E95A08;
 }
 
 .banner-title {
-  font-size: 45px;
+  font-size: 50px;
   font-weight: bold;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
+}
+
+.banner-image {
+  width: 100%;
+}
+
+.banner-image img {
+  width: 100%;
 }
 
 .banner-description {
-  font-size: 16px;
+  width: 70%;
+  font-size: 15px;
   color: rgba(0, 0, 0, 0.50);
+}
+
+/*main style*/
+main {}
+
+.plants {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 40px;
+  padding-bottom: 5px;
+}
+
+.section-description {
+  color: rgba(0, 0, 0, 0.50);
+  font-size: 20px;
+}
+
+/*section style*/
+section {
+  margin: 0px 150px 120px 150px;
+}
+
+/*card style---------*/
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-btn {
+  background-color: #E95A08;
+  color: white;
+  padding: 15px 50px;
+  font-size: 15px;
+  border: none;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*plants lover style*/
+.pl-contents {
+  display: flex;
+  gap: 60px;
+}
+
+.pl-title {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.pl-ul {
+  color: #8987A1;
+  font-size: 18px;
+}
+
+.pl-ul li {
+  padding-bottom: 10px;
+}
+
+/*join section style*/
+.join {
+  background-image: url(./assets/news-letter-bg.png);
+  background-repeat: no-repeat;
+  padding: 100px 250px;
+  text-align: center;
+  margin: 0;
+}
+
+.join-btn {
+  background-color: #E95A08;
+  padding: 15px 20px;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+
+.join-title {
+  padding-bottom: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.join-input {
+  padding: 15px 400px 15px 20px;
+  font-size: 16px;
 }
 
 @media screen and (max-width:576px) {
   header {
-    margin:10px 20px 0px 20px;
+    margin: 0;
   }
-  nav ul  li:nth-child(1) a,li:nth-child(2) a,
-  li:nth-child(3) a {
-    visibility: hidden;
-  }
-  nav{
+
+  nav {
     margin-bottom: 50px;
   }
-  .banner-contents{
+
+  .logo li {
+    padding-right: 0;
+  }
+
+  nav ul li {
+    display: none;
+  }
+
+  .banner-contents {
     flex-direction: column-reverse;
   }
-  .banner-title{
-    font-size: 35px;
+
+  .banner-title {
+    font-size: 30px;
   }
-  .banner-image{
+
+  .banner-description {
     width: 100%;
-    justify-content: right;
+  }
+
+  /*main style*/
+  main {
+    margin: auto;
+  }
+
+  /*card responsive*/
+  .cards {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .card-btn {
+    padding: 10px 30px;
+  }
+
+  .section-subtitle {
+    padding: 10px;
+  }
+
+  .section {
+    margin-bottom: 50px;
+  }
+
+  /*plants lover styles*/
+  .pl-contents {
+    flex-direction: column;
+    gap: 0;
   }
 }
