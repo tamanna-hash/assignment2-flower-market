@@ -192,10 +192,49 @@ section {
   font-weight: bold;
   color: white;
 }
-
 .join-input {
   padding: 15px 400px 15px 20px;
   font-size: 16px;
+}
+.join-input-content {
+  display: flex;
+}
+/*footer styles*/
+footer{
+  padding:40px 140px ;
+}
+.footer-contents{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:100px;
+}
+.footer-description{
+  color:rgba(0, 0, 0, 0.5);
+font-size: 16px;
+font-weight: 400;
+}
+.footer-img{
+  padding-bottom: 20px;
+}
+footer ul li{
+  list-style: none;
+  padding:0px 10px 30px 0px
+  
+}
+footer ul li a{
+  text-decoration: none;
+  color: rgb(107, 114, 128);
+  font-size: 14px;
+  font-weight: 400;
+}
+.footer-icons{
+  display: flex;
+  gap:20px;
+  align-items:flex-start;
+}
+.footer-icons img{
+  width: 30px;
+  height: 30px;
 }
 
 @media screen and (max-width:576px) {
@@ -218,7 +257,9 @@ section {
   .banner-contents {
     flex-direction: column-reverse;
   }
-
+.banner{
+  margin: 0px 10px 70px 10px;
+}
   .banner-title {
     font-size: 30px;
   }
@@ -233,8 +274,11 @@ section {
   }
 
   /*card responsive*/
+  .plants{
+    margin: 70px 10px 0px 10px;
+  }
   .cards {
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .card-btn {
@@ -244,14 +288,37 @@ section {
   .section-subtitle {
     padding: 10px;
   }
-
   .section {
-    margin-bottom: 50px;
+    margin: 0px 10px 50px 20px;
   }
-
   /*plants lover styles*/
   .pl-contents {
     flex-direction: column;
     gap: 0;
+  }
+  .plant-lovers{
+    margin: 70px 10px 0px 10px;
+  }
+  /*join styles*/
+  .join{
+    padding: 50px;
+    margin-top: 70px ;
+  }
+  .join-title{
+    font-size: 30px;
+  }
+  .join-input {
+    padding: 10px 25px 10px 15px;
+  }
+  .join-btn{
+    padding: 10px 7px;
+  }
+  /*footer style*/
+  footer{
+  padding:20px 10px ;
+}
+  .footer-contents{
+  grid-template-columns: repeat(1,1fr);
+  gap:20px;
   }
 }
